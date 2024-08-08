@@ -28,5 +28,5 @@ else
 fi
 EOL
 chmod +x backUPeRF.sh
-(crontab -l 2>/dev/null; echo "* */$BackUPPERHOUR * * * /path/to/backUPeRF.sh") | crontab -
+(crontab -l 2>/dev/null; echo "* */$BackUPPERHOUR * * * /root/backUPeRF.sh") | crontab -
 sudo /root/backUPeRF.sh
