@@ -10,3 +10,18 @@ After entering the above information, the script will create a file named backup
 Additionally, a cron job will be set up based on the specified hour for automatic backups.
 
 This is a simple and practical script for automatically backing up your desired files to the host.
+
+
+BackUPeRF یک اسکریپت بک آپ از یک فایل مشخص در سیستم عامل ابونتو به هاست از طریق FTP است
+
+ابتدا اسکریپت RuNNeRF.sh را اجرا کنید
+
+آدرس هاست و مشخصات ورود را ثبت کنید
+مسیر فایلی که میخواهید برایتان بک آپ گرفته شود را انتخاب کنید برای مثال /etc/x.db
+مسیر فایل در هاست را مشخص کنید، بسیار مهم است که این مسیر در هاست وجود داشته باشد برای مثال /public_html/
+
+پس از وارد کردن اطلاعات بالا اسکریپت یک فایل با اسم backupeRF.sh برای شما ایجاد میکند
+همچنین  کرون جاب با توجه به مقدار ساعت مشخص شده برای دریافت بک آپ اتوماتیک تنظیم خواهد شد.
+
+
+این یک اسکریپت ساده و کاربردی برای دریافت بک آپ اتوماتیک از فایل های دلخواهتان بر روی هاست است.
