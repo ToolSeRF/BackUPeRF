@@ -1,12 +1,12 @@
 #!/bin/bash
-
+sudo apt install lftp
 read -p "FTP_HOST: " FTP_HOST
 read -p "FTP_USER: " FTP_USER
 read -p "FTP_PASSWORD: " FTP_PASSWORD
 read -p "BackupFile: " BackupFile
 read -p "HostDirectory: " HostDirectory
-read -p "BackUPPERHOUR (in minutes): " BackUPPERHOUR
-cat <<EOL > backupeRF.sh
+read -p "Back UP in HOURs: " BackUPPERHOUR
+cat <<EOL > backUPeRF.sh
 #!/bin/bash
 FTP_HOST="$FTP_HOST"
 FTP_USER="$FTP_USER"
@@ -26,5 +26,6 @@ else
     echo "Failed"
 fi
 EOL
-chmod +x backupeRF.sh
-(crontab -l 2>/dev/null; echo "*/$BackUPPERHOUR * * * * /path/to/backupeRF.sh") | crontab -
+chmod +x backUPeRF.sh
+(crontab -l 2>/dev/null; echo "* */$BackUPPERHOUR * * * /path/to/backUPeRF.sh") | crontab -
+sudo /root/backUPeRF.sh
