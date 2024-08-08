@@ -7,7 +7,7 @@ read -p "BackupFile: " BackupFile
 read -p "HostDirectory: " HostDirectory
 read -p "Back UP in HOURs: " BackUPPERHOUR
 read -p "Backup File Prefix Name: " PRFNM
-cat <<EOL > backUPeRF.sh
+cat <<EOL > /etc/backUPeRF.sh
 #!/bin/bash
 FTP_HOST="$FTP_HOST"
 FTP_USER="$FTP_USER"
@@ -28,5 +28,5 @@ else
 fi
 EOL
 chmod +x backUPeRF.sh
-(crontab -l 2>/dev/null; echo "* */$BackUPPERHOUR * * * /root/backUPeRF.sh") | crontab -
-sudo /root/backUPeRF.sh
+(crontab -l 2>/dev/null; echo "0 */$BackUPPERHOUR * * * /etc/backUPeRF.sh") | crontab -
+sudo /etc/backUPeRF.sh
